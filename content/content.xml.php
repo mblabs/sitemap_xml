@@ -52,7 +52,8 @@
 				$fieldset->appendChild(new XMLElement('h3', __('Pin datasource to page')));
 				// List datasources
 				$dsm = new DatasourceManager(Administration::instance());
-				$datasources = array('');
+				$datasources = array();
+				$datasources[] = array();
 				foreach($dsm->listAll() as $ds) {
 					$datasources[] = array(
 										$ds['handle'], 
@@ -61,7 +62,8 @@
 									 );
 				}
 				// List pages
-				$page_list = array('');
+				$page_list = array();
+				$page_list[] = array();
 				foreach($pages as $page) {
 					$parent = '';
 	
